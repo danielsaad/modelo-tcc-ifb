@@ -31,21 +31,15 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ifbtcc}[2024/08/04 Classe LaTeX para trabalho de conclusão de curso do IFB]
 
-\LoadClass[
-	% -- opções da classe memoir --
-	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em recto e verso. Oposto a oneside
-	a4paper,			% tamanho do papel. 
-	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
-	% -- opções do pacote babel --
-	english,			% idioma adicional para hifenização
-	brazil				% o último idioma é o principal do documento
-	]{abntex2}
+
+%
+% Repassa todos os parametros a classe abntex2, 
+\DeclareOption*{%
+  \PassOptionsToClass{\CurrentOption}{abntex2}%
+}
+\ProcessOptions\relax
+
+\LoadClass{abntex2}
 
 % ---
 % Pacotes básicos 
@@ -58,7 +52,10 @@
 \RequirePackage{graphicx}			% Inclusão de gráficos
 % \RequirePackage{microtype} 			% para melhorias de justificação (esse pacote está quebrando a compilação do documento)
 % ---
-		
+
+\input{editaveis/comandos.tex}
+\input{editaveis/informacoes.tex}
+
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -92,11 +89,12 @@
 	\fi}%
 % ---
 
+
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \input{capa/capa.tex}
-
+\input{elementos-pre-textuais/folha-de-rosto.tex}
 % ---
 % Configurações de aparência do PDF final
 
@@ -120,7 +118,7 @@
 		bookmarksdepth=4
 }
 \makeatother
-% --- 
+
 
 % ---
 % Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas

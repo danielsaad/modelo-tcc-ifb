@@ -1,19 +1,30 @@
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \ABNTEXchapterfont\Large Instituto Federal de Educação, Ciência e Tecnologia de Brasília
 
-\titulo{Modelo Canônico de\\ Trabalho Acadêmico com \abnTeX}
-\autor{Equipe \abnTeX}
-\local{Brasil}
-\data{2018, v-1.9.7}
-\orientador{Lauro César Araujo}
-\coorientador{Equipe \abnTeX}
-\instituicao{%
-  Universidade do Brasil -- UBr
-  \par
-  Faculdade de Arquitetura da Informação
-  \par
-  Programa de Pós-Graduação}
-\tipotrabalho{Tese (Doutorado)}
-% O preambulo deve conter o tipo do trabalho, o objetivo, 
-% o nome da instituição e a área de concentração 
-\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
-as normas ABNT apresentado à comunidade de usuários \LaTeX.}
-% ---
+	\includegraphics[width=.3\textwidth]{ifb.png}
+    
+    \vspace*{1cm}
+
+	% \vfill
+    \begin{center}
+    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \end{center}
+    % \vfill
+    \vspace*{2cm}
+
+    {Autor: \ABNTEXchapterfont\large\imprimirautor}\\
+	{Orientador: \ABNTEXchapterfont\large\imprimirorientador}
+
+	\vfill
+    
+    \large\imprimirlocal
+
+    \large\imprimirdata
+    
+    \vspace*{1cm}
+  \end{capa}
+}
+
