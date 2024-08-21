@@ -42,46 +42,41 @@ brazil				% o último idioma é o principal do documento{ifbtcc}
 % ---
 
 % ---
-% Folha de aprovação
-\input{elementos-pre-textuais/folha-de-aprovacao.tex}
-% --- 
-
-% ---
 % Inserir a ficha bibliografica
 % ---
-\input{elementos-pre-textuais/ficha-catalografica.tex}
+\include{elementos-pre-textuais/ficha-catalografica.tex}
 % ---
 
 % ---
 % Inserir errata
 % ---
-\input{elementos-pre-textuais/errata.tex}
+\include{elementos-pre-textuais/errata.tex}
 % ---
 
 % ---
 % Inserir folha de aprovação
 % ---
 
-\input{elementos-pre-textuais/folha-de-aprovacao.tex}
+\include{elementos-pre-textuais/folha-de-aprovacao.tex}
 
 % ---
 
 % ---
 % Dedicatória
 % ---
-\input{elementos-pre-textuais/dedicatoria.tex}
+\include{elementos-pre-textuais/dedicatoria.tex}
 % ---
 
 % ---
 % Agradecimentos
 % ---
-\input{elementos-pre-textuais/agradecimentos.tex}
+\include{elementos-pre-textuais/agradecimentos.tex}
 % ---
 
 % ---
 % Epígrafe
 % ---
-\input{elementos-pre-textuais/epigrafe.tex}
+\include{elementos-pre-textuais/epigrafe.tex}
 % ---
 
 % ---
@@ -89,46 +84,46 @@ brazil				% o último idioma é o principal do documento{ifbtcc}
 % ---
 
 % resumo em português
-\input{elementos-pre-textuais/resumo.tex}
+\include{elementos-pre-textuais/resumo.tex}
 
 % resumo em inglês
-\input{elementos-pre-textuais/abstract.tex}
+\include{elementos-pre-textuais/abstract.tex}
 % ---
 
 % ---
 % inserir lista de ilustrações
 % ---
-\input{elementos-pre-textuais/lista-de-ilustracoes.tex}
+\include{elementos-pre-textuais/lista-de-ilustracoes.tex}
 % ---
 
 % ---
 % inserir lista de quadros
 % ---
-\input{elementos-pre-textuais/lista-de-quadros.tex}
+\include{elementos-pre-textuais/lista-de-quadros.tex}
 % ---
 
 % ---
 % inserir lista de tabelas
 % ---
-\input{elementos-pre-textuais/lista-de-tabelas.tex}
+\include{elementos-pre-textuais/lista-de-tabelas.tex}
 % ---
 
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-\input{elementos-pre-textuais/lista-de-abreviaturas.tex}
+\include{elementos-pre-textuais/lista-de-abreviaturas.tex}
 % ---
 
 % ---
 % inserir lista de símbolos
 % ---
-\input{elementos-pre-textuais/lista-de-simbolos.tex}
+\include{elementos-pre-textuais/lista-de-simbolos.tex}
 % ---
 
 % ---
 % inserir o sumario
 % ---
-\input{elementos-pre-textuais/sumario.tex}
+\include{elementos-pre-textuais/sumario.tex}
 % ---
 
 
@@ -141,22 +136,22 @@ brazil				% o último idioma é o principal do documento{ifbtcc}
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-\input{elementos-textuais/introducao.tex}
+\include{elementos-textuais/introducao.tex}
 
 % ---
 % Capitulo de revisão de literatura
 % ---
-\input{elementos-textuais/revisao-de-literatura.tex}
+\include{elementos-textuais/revisao-de-literatura.tex}
 
 % ---
 % primeiro capitulo de Resultados
 % ---
-\input{elementos-textuais/resultados.tex}
+\include{elementos-textuais/resultados.tex}
 
 % ---
 % Conclusão
 % ---
-\input{elementos-textuais/conclusao.tex}
+\include{elementos-textuais/conclusao.tex}
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
@@ -188,7 +183,7 @@ brazil				% o último idioma é o principal do documento{ifbtcc}
 
 % Imprime uma página indicando o início dos apêndices
 \partapendices
-\input{elementos-pos-textuais/apendice.tex}
+\include{elementos-pos-textuais/apendice.tex}
 \end{apendicesenv}
 % ---
 
@@ -205,14 +200,14 @@ brazil				% o último idioma é o principal do documento{ifbtcc}
 % Imprime uma página indicando o início dos anexos
 \partanexos
 
-\input{elementos-pos-textuais/anexo.tex}
+\include{elementos-pos-textuais/anexo.tex}
 
 \end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
-\input{elementos-pos-textuais/indice-remissivo.tex}
+\include{elementos-pos-textuais/indice-remissivo.tex}
 %---------------------------------------------------------------------
 
 \end{document}
