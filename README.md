@@ -149,30 +149,26 @@ Referencie-os, por exemplo, com `\autoref{fig:arquitetura}`, `\autoref{tab:resul
 
 ## 8. Listagens de código
 
-O modelo não carrega um pacote de listagem de código por padrão. Uma opção comum é carregar `listings` no preâmbulo de `tcc.tex` e configurar a linguagem. Exemplo:
+O modelo não carrega um pacote de listagem de código por padrão. Para usar `minted`, carregue o pacote no preâmbulo de `tcc.tex` (antes de `\begin{document}`):
 
 ```latex
-\usepackage{listings}
-\usepackage{xcolor}
-\lstset{
-  basicstyle=\ttfamily\small,
-  numbers=left,
-  numberstyle=\tiny,
-  breaklines=true,
-  frame=single
-}
+\usepackage{minted}
+\usepackage{caption}
 ```
 
-No corpo do texto:
+No corpo do texto, use o ambiente `minted`. O exemplo abaixo inclui numeração de linhas, quebra automática, moldura, legenda e rótulo para referência cruzada:
 
 ```latex
-\begin{lstlisting}[language=Python,caption={Exemplo de função},label={lst:funcao}]
+\begin{listing}[htb]
+  \begin{minted}[linenos,breaklines,frame=single]{python}
 def soma(a, b):
     return a + b
-\end{lstlisting}
+  \end{minted}
+  \caption{Exemplo de função}\label{lst:funcao}
+\end{listing}
 ```
 
-Consulte a documentação de `listings` para linguagens e personalização. Outra opção é `minted`, que requer configuração adicional de compilação e execução externa do Pygments; verifique se seu ambiente permite isso antes de adotá-lo.
+Faça referência no texto com `\autoref{lst:funcao}`. Consulte a documentação do `minted` para opções de aparência e nomes de linguagens. A compilação exige Python com Pygments instalado e permissão para executar o programa auxiliar; com `pdflatex`, habilite `-shell-escape` (por exemplo, `pdflatex -shell-escape tcc`). Configure essa opção também no editor ou serviço de compilação. Em ambientes que não permitem execução externa, `minted` não compilará.
 
 ## 9. Glossário, siglas e símbolos
 
