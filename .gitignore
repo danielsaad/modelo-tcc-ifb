@@ -14,3 +14,4 @@
 *.synctex.gz
 *.toc
 tcc.pdf
+.vscode
